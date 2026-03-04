@@ -1,0 +1,13 @@
+{
+  "run_id": "R128_basic_sgd_s42",
+  "timestamp": "2026-03-02T15:08:06.779138",
+  "resolution": 128,
+  "augmentation": "basic",
+  "optimizer": "sgd",
+  "seed": 42,
+  "final_test_accuracy": 52.74,
+  "best_test_accuracy": 52.74,
+  "avg_epoch_time_sec": 185.0,
+  "total_training_time_sec": 925.01,
+  "num_epochs": 5
+}

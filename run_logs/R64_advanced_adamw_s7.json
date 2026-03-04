@@ -1,0 +1,13 @@
+{
+  "run_id": "R64_advanced_adamw_s7",
+  "timestamp": "2026-03-02T13:23:02.333437",
+  "resolution": 64,
+  "augmentation": "advanced",
+  "optimizer": "adamw",
+  "seed": 7,
+  "final_test_accuracy": 84.75,
+  "best_test_accuracy": 84.75,
+  "avg_epoch_time_sec": 56.23,
+  "total_training_time_sec": 281.13,
+  "num_epochs": 5
+}

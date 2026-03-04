@@ -1,0 +1,13 @@
+{
+  "run_id": "R128_none_sgd_s7",
+  "timestamp": "2026-03-02T14:04:04.330076",
+  "resolution": 128,
+  "augmentation": "none",
+  "optimizer": "sgd",
+  "seed": 7,
+  "final_test_accuracy": 55.44,
+  "best_test_accuracy": 55.44,
+  "avg_epoch_time_sec": 185.29,
+  "total_training_time_sec": 926.43,
+  "num_epochs": 5
+}

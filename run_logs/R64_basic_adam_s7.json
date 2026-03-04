@@ -1,0 +1,13 @@
+{
+  "run_id": "R64_basic_adam_s7",
+  "timestamp": "2026-03-02T17:35:54.456471",
+  "resolution": 64,
+  "augmentation": "basic",
+  "optimizer": "adam",
+  "seed": 7,
+  "final_test_accuracy": 85.74,
+  "best_test_accuracy": 85.74,
+  "avg_epoch_time_sec": 54.77,
+  "total_training_time_sec": 273.85,
+  "num_epochs": 5
+}

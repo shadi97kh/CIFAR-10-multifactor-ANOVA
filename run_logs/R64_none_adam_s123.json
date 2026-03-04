@@ -1,0 +1,13 @@
+{
+  "run_id": "R64_none_adam_s123",
+  "timestamp": "2026-03-02T13:32:49.506339",
+  "resolution": 64,
+  "augmentation": "none",
+  "optimizer": "adam",
+  "seed": 123,
+  "final_test_accuracy": 85.5,
+  "best_test_accuracy": 85.5,
+  "avg_epoch_time_sec": 54.77,
+  "total_training_time_sec": 273.85,
+  "num_epochs": 5
+}

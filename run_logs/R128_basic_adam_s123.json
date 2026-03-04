@@ -1,0 +1,13 @@
+{
+  "run_id": "R128_basic_adam_s123",
+  "timestamp": "2026-03-02T17:52:23.126274",
+  "resolution": 128,
+  "augmentation": "basic",
+  "optimizer": "adam",
+  "seed": 123,
+  "final_test_accuracy": 81.88,
+  "best_test_accuracy": 81.88,
+  "avg_epoch_time_sec": 185.42,
+  "total_training_time_sec": 927.09,
+  "num_epochs": 5
+}

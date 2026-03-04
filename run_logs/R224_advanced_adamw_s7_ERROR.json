@@ -1,0 +1,4 @@
+{
+  "run_id": "R224_advanced_adamw_s7",
+  "error": "CUDA out of memory. Tried to allocate 1.53 GiB. GPU 0 has a total capacity of 15.77 GiB of which 1.05 GiB is free. Including non-PyTorch memory, this process has 14.71 GiB memory in use. Of the allocated memory 10.85 GiB is allocated by PyTorch, and 3.48 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+}

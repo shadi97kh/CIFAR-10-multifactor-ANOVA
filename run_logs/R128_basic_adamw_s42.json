@@ -1,0 +1,13 @@
+{
+  "run_id": "R128_basic_adamw_s42",
+  "timestamp": "2026-03-02T16:36:42.511570",
+  "resolution": 128,
+  "augmentation": "basic",
+  "optimizer": "adamw",
+  "seed": 42,
+  "final_test_accuracy": 80.67,
+  "best_test_accuracy": 80.67,
+  "avg_epoch_time_sec": 185.35,
+  "total_training_time_sec": 926.75,
+  "num_epochs": 5
+}

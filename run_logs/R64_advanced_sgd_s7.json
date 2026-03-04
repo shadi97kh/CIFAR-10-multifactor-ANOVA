@@ -1,0 +1,13 @@
+{
+  "run_id": "R64_advanced_sgd_s7",
+  "timestamp": "2026-03-02T14:13:51.823524",
+  "resolution": 64,
+  "augmentation": "advanced",
+  "optimizer": "sgd",
+  "seed": 7,
+  "final_test_accuracy": 52.12,
+  "best_test_accuracy": 52.12,
+  "avg_epoch_time_sec": 54.69,
+  "total_training_time_sec": 273.46,
+  "num_epochs": 5
+}
