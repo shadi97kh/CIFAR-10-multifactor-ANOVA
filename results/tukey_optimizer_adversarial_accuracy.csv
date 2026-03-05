@@ -1,0 +1,4 @@
+group1,group2,meandiff,p-adj,lower,upper,reject
+adam,adamw,0.387,0.9954,-9.7293,10.5034,False
+adam,sgd,-5.727,0.3708,-15.8434,4.3893,False
+adamw,sgd,-6.1141,0.3236,-16.2304,4.0023,False

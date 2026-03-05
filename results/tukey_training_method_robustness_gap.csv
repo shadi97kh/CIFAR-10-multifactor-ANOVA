@@ -1,0 +1,4 @@
+group1,group2,meandiff,p-adj,lower,upper,reject
+fgsm,pgd,-0.5759,0.8371,-2.9953,1.8435,False
+fgsm,standard,35.6896,0.0,33.2702,38.109,True
+pgd,standard,36.2656,0.0,33.8461,38.685,True

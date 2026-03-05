@@ -1,0 +1,115 @@
+DESCRIPTIVE STATISTICS
+==================================================
+Grand mean: 73.38%  (std: 5.50)
+
+--- RESOLUTION ---
+          32:  75.91%  (std=3.73, n=27)
+          64:  73.12%  (std=5.25, n=27)
+          96:  71.10%  (std=6.29, n=27)
+
+--- AUGMENTATION ---
+        none:  74.41%  (std=4.74, n=27)
+       basic:  72.96%  (std=5.73, n=27)
+    advanced:  72.77%  (std=6.02, n=27)
+
+--- OPTIMIZER ---
+         sgd:  66.52%  (std=3.86, n=27)
+        adam:  76.76%  (std=1.69, n=27)
+       adamw:  76.86%  (std=1.43, n=27)
+
+
+ASSUMPTION CHECKS
+==================================================
+Shapiro-Wilk (normality):  W=0.9504, p=0.0034  ✗ FAIL
+Levene (    resolution):  F=1.0591, p=0.3517  ✓ PASS
+Levene (  augmentation):  F=0.2376, p=0.7891  ✓ PASS
+Levene (     optimizer):  F=14.4072, p=0.0000  ✗ FAIL
+Breusch-Pagan:             LM=47.2488, p=0.0066  ✗ FAIL
+
+Note: If normality is violated, ANOVA is still robust with balanced
+designs and n≥3 per cell (Lindman, 1974). Residual plots should be
+inspected visually to confirm no severe departures.
+
+THREE-WAY ANOVA (Type II SS)
+==================================================
+α = 0.05
+
+Source                       SS    DF          F      p-value       η² partial η²   Sig
+------------------------------------------------------------------------------------------
+Resolution (A)           315.02     2   178.5935     1.57e-24   0.1301     0.8687     *
+Augmentation (B)          43.34     2    24.5730     2.58e-08   0.0179     0.4765     *
+Optimizer (C)           1906.67     2  1080.9426     2.79e-44   0.7873     0.9756     *
+A × B                     10.45     4     2.9611     2.77e-02   0.0043     0.1799     *
+A × C                     77.46     4    21.9580     8.42e-11   0.0320     0.6193     *
+B × C                     15.51     4     4.3967     3.77e-03   0.0064     0.2457     *
+A × B × C                  5.62     8     0.7959     6.09e-01   0.0023     0.1055      
+Residual                  47.63    54                           0.0197                 
+------------------------------------------------------------------------------------------
+
+R² = 0.9803
+Adjusted R² = 0.9709
+
+Significant effects (p < 0.05):
+  • Resolution (A): F(2,54) = 178.59, p = 1.57e-24, partial η² = 0.8687
+  • Augmentation (B): F(2,54) = 24.57, p = 2.58e-08, partial η² = 0.4765
+  • Optimizer (C): F(2,54) = 1080.94, p = 2.79e-44, partial η² = 0.9756
+  • A × B: F(4,54) = 2.96, p = 2.77e-02, partial η² = 0.1799
+  • A × C: F(4,54) = 21.96, p = 8.42e-11, partial η² = 0.6193
+  • B × C: F(4,54) = 4.40, p = 3.77e-03, partial η² = 0.2457
+
+POST-HOC COMPARISONS (Tukey HSD)
+==================================================
+
+--- RESOLUTION ---
+Multiple Comparison of Means - Tukey HSD, FWER=0.05 
+====================================================
+group1 group2 meandiff p-adj   lower   upper  reject
+----------------------------------------------------
+    32     64  -2.7911 0.1256 -6.1706  0.5884  False
+    32     96    -4.81  0.003 -8.1895 -1.4305   True
+    64     96  -2.0189 0.3319 -5.3984  1.3606  False
+----------------------------------------------------
+
+--- AUGMENTATION ---
+ Multiple Comparison of Means - Tukey HSD, FWER=0.05 
+=====================================================
+ group1  group2 meandiff p-adj   lower  upper  reject
+-----------------------------------------------------
+advanced  basic   0.1867 0.9915 -3.4041 3.7774  False
+advanced   none   1.6367 0.5237 -1.9541 5.2274  False
+   basic   none     1.45 0.6012 -2.1408 5.0408  False
+-----------------------------------------------------
+
+--- OPTIMIZER ---
+ Multiple Comparison of Means - Tukey HSD, FWER=0.05 
+=====================================================
+group1 group2 meandiff p-adj   lower    upper  reject
+-----------------------------------------------------
+  adam  adamw   0.1026 0.9882  -1.5684  1.7735  False
+  adam    sgd -10.2404    0.0 -11.9113 -8.5694   True
+ adamw    sgd  -10.343    0.0 -12.0139  -8.672   True
+-----------------------------------------------------
+
+CONCLUSIONS
+==================================================
+
+The following factors/interactions have a statistically significant
+effect on CIFAR-10 classification accuracy (α = 0.05):
+
+  • Resolution: F = 178.59, p = 1.57e-24, partial η² = 0.8687 (large effect)
+  • Augmentation: F = 24.57, p = 2.58e-08, partial η² = 0.4765 (large effect)
+  • Optimizer: F = 1080.94, p = 2.79e-44, partial η² = 0.9756 (large effect)
+  • Resolution × Augmentation: F = 2.96, p = 2.77e-02, partial η² = 0.1799 (large effect)
+  • Resolution × Optimizer: F = 21.96, p = 8.42e-11, partial η² = 0.6193 (large effect)
+  • Augmentation × Optimizer: F = 4.40, p = 3.77e-03, partial η² = 0.2457 (large effect)
+
+Non-significant effects (p ≥ 0.05):
+  • Three-way interaction: p = 0.6086
+
+Best performing combination:
+  Resolution=32, Augmentation=none, Optimizer=adam
+  Mean accuracy: 78.93%
+
+Worst performing combination:
+  Resolution=96, Augmentation=advanced, Optimizer=sgd
+  Mean accuracy: 60.72%
